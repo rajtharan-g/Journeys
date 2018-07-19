@@ -12,6 +12,10 @@
 		8509FB9720FFA0DF00030BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9520FFA0DF00030BCC /* Main.storyboard */; };
 		8509FB9920FFA0E100030BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9820FFA0E100030BCC /* Assets.xcassets */; };
 		8509FB9C20FFA0E100030BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9A20FFA0E100030BCC /* LaunchScreen.storyboard */; };
+		8531B9A120FFA3920082743A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A020FFA3920082743A /* libsqlite3.0.tbd */; };
+		8531B9A320FFA3A40082743A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A220FFA3A40082743A /* libz.tbd */; };
+		8531B9A820FFA59C0082743A /* MMIFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8531B9A620FFA59B0082743A /* MMIFramework.bundle */; };
+		8531B9A920FFA59C0082743A /* MMIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A720FFA59C0082743A /* MMIFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		8509FB9820FFA0E100030BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8509FB9B20FFA0E100030BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8509FB9D20FFA0E100030BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8531B9A020FFA3920082743A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8531B9A220FFA3A40082743A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8531B9A620FFA59B0082743A /* MMIFramework.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MMIFramework.bundle; path = Journeys/MMIFramework.bundle; sourceTree = SOURCE_ROOT; };
+		8531B9A720FFA59C0082743A /* MMIFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMIFramework.framework; path = Journeys/MMIFramework.framework; sourceTree = SOURCE_ROOT; };
+		8531B9AC20FFAC8B0082743A /* XCode 9.3.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = "XCode 9.3.app"; path = "../../../../../Applications/XCode 9.3.app"; sourceTree = "<group>"; };
+		8531B9B020FFAE340082743A /* Journeys-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Journeys-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8531B9A920FFA59C0082743A /* MMIFramework.framework in Frameworks */,
+				8531B9A320FFA3A40082743A /* libz.tbd in Frameworks */,
+				8531B9A120FFA3920082743A /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 			children = (
 				8509FB9020FFA0DF00030BCC /* Journeys */,
 				8509FB8F20FFA0DF00030BCC /* Products */,
+				8531B99F20FFA3920082743A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +68,27 @@
 		8509FB9020FFA0DF00030BCC /* Journeys */ = {
 			isa = PBXGroup;
 			children = (
+				8531B9A620FFA59B0082743A /* MMIFramework.bundle */,
+				8531B9A720FFA59C0082743A /* MMIFramework.framework */,
 				8509FB9120FFA0DF00030BCC /* AppDelegate.swift */,
 				8509FB9320FFA0DF00030BCC /* ViewController.swift */,
 				8509FB9520FFA0DF00030BCC /* Main.storyboard */,
 				8509FB9820FFA0E100030BCC /* Assets.xcassets */,
 				8509FB9A20FFA0E100030BCC /* LaunchScreen.storyboard */,
 				8509FB9D20FFA0E100030BCC /* Info.plist */,
+				8531B9B020FFAE340082743A /* Journeys-Bridging-Header.h */,
 			);
 			path = Journeys;
+			sourceTree = "<group>";
+		};
+		8531B99F20FFA3920082743A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8531B9AC20FFAC8B0082743A /* XCode 9.3.app */,
+				8531B9A220FFA3A40082743A /* libz.tbd */,
+				8531B9A020FFA3920082743A /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8531B9A820FFA59C0082743A /* MMIFramework.bundle in Resources */,
 				8509FB9C20FFA0E100030BCC /* LaunchScreen.storyboard in Resources */,
 				8509FB9920FFA0E100030BCC /* Assets.xcassets in Resources */,
 				8509FB9720FFA0DF00030BCC /* Main.storyboard in Resources */,
@@ -280,14 +308,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Journeys",
+					"$(PROJECT_DIR)/Journeys/Framework",
+				);
 				INFOPLIST_FILE = Journeys/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Rajtharan.Journeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Journeys/Journeys-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,14 +334,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Journeys",
+					"$(PROJECT_DIR)/Journeys/Framework",
+				);
 				INFOPLIST_FILE = Journeys/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Rajtharan.Journeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Journeys/Journeys-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

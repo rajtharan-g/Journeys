@@ -6,6 +6,9 @@
 //  Copyright © 2018 Rajtharan Gopal. All rights reserved.
 //
 
+let kMapAPIKEY = "3m2dboq32m66g3t44xfqwv1dg3tk1py3"
+let kMapSDKKey = "czry1hd2gikvwpczm32vx28q5dm52kjp"
+
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        LicenceManager.sharedInstance().restAPIKey = kMapAPIKEY
+        LicenceManager.sharedInstance().mapSDKKey = kMapSDKKey
+        
         return true
     }
 

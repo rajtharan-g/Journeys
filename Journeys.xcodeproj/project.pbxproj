@@ -12,6 +12,8 @@
 		8509FB9720FFA0DF00030BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9520FFA0DF00030BCC /* Main.storyboard */; };
 		8509FB9920FFA0E100030BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9820FFA0E100030BCC /* Assets.xcassets */; };
 		8509FB9C20FFA0E100030BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9A20FFA0E100030BCC /* LaunchScreen.storyboard */; };
+		851638A9210258020094CFAE /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851638A8210258020094CFAE /* SearchAddressViewController.swift */; };
+		851638AB210260D40094CFAE /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851638AA210260D40094CFAE /* Manager.swift */; };
 		8531B9A120FFA3920082743A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A020FFA3920082743A /* libsqlite3.0.tbd */; };
 		8531B9A320FFA3A40082743A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A220FFA3A40082743A /* libz.tbd */; };
 		8531B9A820FFA59C0082743A /* MMIFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8531B9A620FFA59B0082743A /* MMIFramework.bundle */; };
@@ -26,6 +28,8 @@
 		8509FB9820FFA0E100030BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8509FB9B20FFA0E100030BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8509FB9D20FFA0E100030BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		851638A8210258020094CFAE /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
+		851638AA210260D40094CFAE /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		8531B9A020FFA3920082743A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		8531B9A220FFA3A40082743A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		8531B9A620FFA59B0082743A /* MMIFramework.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MMIFramework.bundle; path = Journeys/MMIFramework.bundle; sourceTree = SOURCE_ROOT; };
@@ -77,6 +81,8 @@
 				8509FB9A20FFA0E100030BCC /* LaunchScreen.storyboard */,
 				8509FB9D20FFA0E100030BCC /* Info.plist */,
 				8531B9B020FFAE340082743A /* Journeys-Bridging-Header.h */,
+				851638A8210258020094CFAE /* SearchAddressViewController.swift */,
+				851638AA210260D40094CFAE /* Manager.swift */,
 			);
 			path = Journeys;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 			files = (
 				8509FB9420FFA0DF00030BCC /* ViewController.swift in Sources */,
 				8509FB9220FFA0DF00030BCC /* AppDelegate.swift in Sources */,
+				851638A9210258020094CFAE /* SearchAddressViewController.swift in Sources */,
+				851638AB210260D40094CFAE /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

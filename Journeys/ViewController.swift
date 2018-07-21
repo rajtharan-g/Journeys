@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var toAddressTextField: UITextField!
     var mapView: MMIMapView!
+    
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView = MMIMapView(frame: view.frame)
         if let aView = mapView {
             view.addSubview(aView)
+            view.sendSubview(toBack: aView)
         }
         mapView.zoom = 14.0
         mapView.showZoomButtons(true)
@@ -34,6 +39,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - IBAction
+    
+    @IBAction func toAddressButtonPressed(_ sender: UIButton) {
+        let searchAddressViewController = SearchAddressViewController.searchAddressViewController()
+        navigationController?.pushViewController(searchAddressViewController, animated: true)
+    }
+    
+    // MARK: - Custom
     
     func addMarker(latitude: Double, longitude: Double, description: String, image: UIImage?, opacity: Float = 1) {
         let annotation = MMIAnnotation()
@@ -64,20 +78,6 @@ class ViewController: UIViewController {
         annotation.lineColor = lineColor
         annotation.fillColor = fillColor
         mapView.add(annotation)
-    }
-    
-    func geocode(placeName: String) {
-        let managerObject = GeocodeManager()
-        managerObject.getPlace(placeName) { (result, error) in
-            // if error is nil, then result is success.  // response is the results array
-        }
-    }
-    
-    func reverseGeocode(startPoint: Double, finalPoint: Double) {
-        let reverseGeoCodeManagerObject = ReverseGeocodeManager()
-        reverseGeoCodeManagerObject.getPlace(CLLocationCoordinate2DMake(startPoint, finalPoint)) { result, error in
-            // if error is nil, then result is success.  // response is the results array
-        }
     }
     
     func route(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {

@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     @IBAction func toAddressButtonPressed(_ sender: UIButton) {
         let searchAddressViewController = SearchAddressViewController.searchAddressViewController()
+        searchAddressViewController.delegate = self
         navigationController?.pushViewController(searchAddressViewController, animated: true)
     }
     
@@ -99,6 +100,8 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: - MMIDelegate
+
 extension ViewController: MMIDelegate {
     
     func mapViewRegionDidChange(_ mapView: MMIMapView?) {
@@ -117,6 +120,16 @@ extension ViewController: MMIDelegate {
     }
     
     func longPress(onMap map: MMIMapView!, at point: CGPoint) {
+    }
+    
+}
+
+// MARK: - SearchAddressViewControllerDelegate
+
+extension ViewController: SearchAddressViewControllerDelegate {
+    
+    func selectedAddress(address: Address) {
+        toAddressTextField.text = address.formattedAddress
     }
     
 }

@@ -14,10 +14,12 @@
 		8509FB9C20FFA0E100030BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8509FB9A20FFA0E100030BCC /* LaunchScreen.storyboard */; };
 		851638A9210258020094CFAE /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851638A8210258020094CFAE /* SearchAddressViewController.swift */; };
 		851638AB210260D40094CFAE /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851638AA210260D40094CFAE /* Manager.swift */; };
+		8519B853210651EE0037D0F6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519B852210651EE0037D0F6 /* Address.swift */; };
 		8531B9A120FFA3920082743A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A020FFA3920082743A /* libsqlite3.0.tbd */; };
 		8531B9A320FFA3A40082743A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A220FFA3A40082743A /* libz.tbd */; };
 		8531B9A820FFA59C0082743A /* MMIFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8531B9A620FFA59B0082743A /* MMIFramework.bundle */; };
 		8531B9A920FFA59C0082743A /* MMIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531B9A720FFA59C0082743A /* MMIFramework.framework */; };
+		8568C24F2103285E00E56BB9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568C24E2103285E00E56BB9 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +32,14 @@
 		8509FB9D20FFA0E100030BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		851638A8210258020094CFAE /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
 		851638AA210260D40094CFAE /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		8519B852210651EE0037D0F6 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		8531B9A020FFA3920082743A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		8531B9A220FFA3A40082743A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		8531B9A620FFA59B0082743A /* MMIFramework.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MMIFramework.bundle; path = Journeys/MMIFramework.bundle; sourceTree = SOURCE_ROOT; };
 		8531B9A720FFA59C0082743A /* MMIFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMIFramework.framework; path = Journeys/MMIFramework.framework; sourceTree = SOURCE_ROOT; };
 		8531B9AC20FFAC8B0082743A /* XCode 9.3.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = "XCode 9.3.app"; path = "../../../../../Applications/XCode 9.3.app"; sourceTree = "<group>"; };
 		8531B9B020FFAE340082743A /* Journeys-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Journeys-Bridging-Header.h"; sourceTree = "<group>"; };
+		8568C24E2103285E00E56BB9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				8531B9B020FFAE340082743A /* Journeys-Bridging-Header.h */,
 				851638A8210258020094CFAE /* SearchAddressViewController.swift */,
 				851638AA210260D40094CFAE /* Manager.swift */,
+				8568C24E2103285E00E56BB9 /* SwiftyJSON.swift */,
+				8519B852210651EE0037D0F6 /* Address.swift */,
 			);
 			path = Journeys;
 			sourceTree = "<group>";
@@ -169,9 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8519B853210651EE0037D0F6 /* Address.swift in Sources */,
 				8509FB9420FFA0DF00030BCC /* ViewController.swift in Sources */,
 				8509FB9220FFA0DF00030BCC /* AppDelegate.swift in Sources */,
 				851638A9210258020094CFAE /* SearchAddressViewController.swift in Sources */,
+				8568C24F2103285E00E56BB9 /* SwiftyJSON.swift in Sources */,
 				851638AB210260D40094CFAE /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

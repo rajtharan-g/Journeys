@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol SearchAddressViewControllerDelegate {
-    func selectedAddress(address: String)
+protocol SearchAddressViewControllerDelegate: class {
+    func selectedAddress(address: Address)
 }
 
 class SearchAddressViewController: UIViewController {
@@ -27,13 +27,14 @@ class SearchAddressViewController: UIViewController {
     
     // MARK: - Properties
     
-    var addressArray: [String] = []
+    var addressArray: [Address] = []
+    weak var delegate: SearchAddressViewControllerDelegate?
     
     // MARK: - Initialization
     
-    class func searchAddressViewController() -> UIViewController {
+    class func searchAddressViewController() -> SearchAddressViewController {
         let storyboard = UIStoryboard(name: SearchAddressViewController.storyboardName, bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: SearchAddressViewController.viewControllerIdentifier)
+        let viewController = storyboard.instantiateViewController(withIdentifier: SearchAddressViewController.viewControllerIdentifier) as! SearchAddressViewController
         return viewController
     }
     
@@ -58,8 +59,8 @@ class SearchAddressViewController: UIViewController {
     
     // MARK: - Configuration
     
-    func configureCell(_ cell: UITableViewCell, forAddress address: String) {
-        cell.textLabel?.text = address
+    func configureCell(_ cell: UITableViewCell, forAddress address: Address) {
+        cell.textLabel?.text = address.formattedAddress
     }
     
     // MARK: - Custom methods
@@ -69,8 +70,8 @@ class SearchAddressViewController: UIViewController {
             addressArray = []
             tableView.reloadData()
         } else {
-            Manager.shared.geocode(placeName: placeName) { (formattedAddress, error) in
-                self.addressArray = formattedAddress ?? []
+            Manager.shared.geocode(placeName: placeName) { (addressArray, error) in
+                self.addressArray = addressArray ?? []
                 self.tableView.reloadData()
             }
         }
@@ -110,6 +111,17 @@ extension SearchAddressViewController: UITableViewDataSource {
         configureCell(cell, forAddress: address)
         
         return cell
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+
+extension SearchAddressViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.selectedAddress(address: addressArray[indexPath.row])
+        navigationController?.popViewController(animated: true)
     }
     
 }
